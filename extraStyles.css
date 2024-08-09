@@ -5,27 +5,55 @@ body{
 .navContainer{
   position: relative;
 }
-/* .navContainer ::after{
-           
-  content: "";
-  position: absolute;
-  bottom: 0;
-  right: -25px;
-  width: 25px;
-  height: 25px;
-  background: transparent;
-  border-radius: 50%;
-  box-shadow: -12px 12px 0 #fff;
+.custom-gradient-text {
+  background: linear-gradient(103deg, #E31D1C -63.95%, #0E51A0 165.1%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   
-} */
-.navContainer::after {
-  content: "";
+}
+.custom-gradient-border {
+  position: relative;
+  border-radius: 9px; /* Adjust the radius for roundness */
+  background: #fff;
+  border: transparent;
+}
+
+.custom-gradient-border::before {
+  content: '';
   position: absolute;
-  bottom: 0px;
-  right: -40px;
-  width: 40px;
-  height: 40px;
-  background-color: transparent;
-  border-radius: 50%;
-  box-shadow: -19px 19px 0 #fff;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  margin: -1px;
+  border-radius: 10px; /* Match the radius with the div */
+  background: linear-gradient(103deg, #E31D1C -63.95%, #0E51A0 165.1%);
+}
+.selectedCity{
+  background: linear-gradient(103deg, #E31D1C -63.95%, #0E51A0 165.1%) !important;
+  color: white !important;
+}
+
+
+@media (max-width:830px) {
+  .heroSectionHide{
+    display: none !important;
+  }
+}
+.snipContainer{
+  height: 100vh;
+  overflow: hidden;
+}
+.chooseCityWidget{
+  display: none;
+}
+.chooseCityOverlay{
+  display: none;
+}
+@media (max-width:830px) {
+  .chooseCityOverlay{
+    display: none !important;
+  }
 }

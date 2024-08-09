@@ -14,12 +14,20 @@ module.exports = {
       'headingCustomSmall':['2.1rem','2.5rem'],
       'mediumFont':['0.80rem','1.3rem'],
       'smallFont':['0.6rem','1rem']
+      },
+      screens: {
+        md: '950px', 
+        customMd: '830px',
+        customLg: '1080px'
+      },
+      maxWidth: {
+        'customMax': '103rem'
       }
     },
   },
   variants: {
     extend: {
-      fontSize: ['responsive', 'important'], // Ensure responsiveness and importance
+      fontSize: ['responsive', 'important'], 
     },
   },
   plugins: [],
